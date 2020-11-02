@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainsData", "TrainsData.csproj", "{53B8869F-CDAB-493B-B39B-6C41BA2E091F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\..\DataAccessDemo2\DataAccess\DataAccess.csproj", "{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

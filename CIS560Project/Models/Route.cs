@@ -13,7 +13,7 @@ namespace CIS560Project.Models
         public string DepartureLocation { get; }
         public string ArrivalLocation { get; }
         public DateTimeOffset DepartureTime { get; }
-        public DateTimeOffset ArrivalTime { get; }
+        public DateTimeOffset ArrivalTime { get; set; }
 
         public Route(int routeID, int trainID, string departureLocation, string arrivalLocation, DateTimeOffset departureTime)
         {

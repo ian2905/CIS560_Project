@@ -1,0 +1,6 @@
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\clous\source\repos\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.pdb
