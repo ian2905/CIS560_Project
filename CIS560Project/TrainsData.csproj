@@ -52,6 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\CarType.cs" />
+    <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Train.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,12 +83,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataDelegates\" />
-    <Folder Include="Models\" />
-    <Folder Include="Sql\Data\" />
-    <Folder Include="Sql\Procedures\" />
-    <Folder Include="Sql\Schemas\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sql\Data\Trains.CarType.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchCar.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchTrain.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchPassenger.sql" />
+    <Content Include="Sql\Procedures\Trains.CreateCar.sql" />
+    <Content Include="Sql\Procedures\Trains.CreatePassengerRoute.sql" />
+    <Content Include="Sql\Procedures\Trains.AddArrivalTime.sql" />
+    <Content Include="Sql\Procedures\Trains.CreateRoute.sql" />
+    <Content Include="Sql\Procedures\Trains.CreatePassenger.sql" />
+    <Content Include="Sql\Procedures\Trains.CreateTrain.sql" />
+    <Content Include="Sql\Schemas\Trains.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\Trains.PassengerRoute.sql" />
     <Content Include="Sql\Tables\Trains.Passenger.sql" />
