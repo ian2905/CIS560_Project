@@ -84,6 +84,10 @@
     <Folder Include="Sql\Schemas\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sql\Tables\DropTables.sql" />
+    <Content Include="Sql\Tables\Trains.PassengerRoute.sql" />
+    <Content Include="Sql\Tables\Trains.Passenger.sql" />
+    <Content Include="Sql\Tables\Trains.CarType.sql" />
     <Content Include="Sql\Tables\Trains.Route.sql" />
     <Content Include="Sql\Tables\Trains.Car.sql" />
     <Content Include="Sql\Tables\Trains.Train.sql" />

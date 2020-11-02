@@ -13,7 +13,13 @@ BEGIN
       CONSTRAINT [PK_Trains_Train_CarID] PRIMARY KEY CLUSTERED
       (
          CarID ASC
-      )
+      ),
+
+      CONSTRAINT FK_Trains_Car_Trains_Train FOREIGN KEY(TrainID)
+      REFERENCES Trains.Train(TrainID),
+
+      CONSTRAINT FK_Trains_Car_Trains_CarType FOREIGN KEY(CarTypeID)
+      REFERENCES Trains.CarType(CarTypeID)
    );
 END;
 

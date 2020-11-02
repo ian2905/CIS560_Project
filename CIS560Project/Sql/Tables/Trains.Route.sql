@@ -9,23 +9,16 @@ BEGIN
       DepartureTime DATETIMEOFFSET NOT NULL,
       ArrivalTime DATETIMEOFFSET NOT NULL,
       Distance INT NOT NULL,
-      StateCode CHAR(2) NOT NULL,
-      ZipCode CHAR(5) NOT NULL,
-      CreatedOn DATETIMEOFFSET NOT NULL
-         CONSTRAINT DF_Person_PersonAddress_CreatedOn DEFAULT(SYSDATETIMEOFFSET()),
-      UpdatedOn DATETIMEOFFSET NOT NULL
-         CONSTRAINT DF_Person_PersonAddress_UpdatedOn DEFAULT(SYSDATETIMEOFFSET()),
+      CreatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+      UpdatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 
-      CONSTRAINT [PK_Person_PersonAddress_PersonAddressId] PRIMARY KEY CLUSTERED
+      CONSTRAINT [PK_Trains.Route.RouteID] PRIMARY KEY CLUSTERED
       (
-         PersonAddressId ASC
+         RouteID ASC
       ),
 
-      CONSTRAINT FK_Person_PersonAddress_Person_Person FOREIGN KEY(PersonId)
-      REFERENCES Person.Person(PersonId),
-
-      CONSTRAINT FK_Person_PersonAddress_Person_AddressType FOREIGN KEY(AddressTypeId)
-      REFERENCES Person.AddressType(AddressTypeId)
+      CONSTRAINT FK_Trains_Route_Trains_Train FOREIGN KEY(TrainID)
+      REFERENCES Trains.Train(TrainID)
    );
 END
 
@@ -37,15 +30,16 @@ IF NOT EXISTS
    (
       SELECT *
       FROM sys.key_constraints kc
-      WHERE kc.parent_object_id = OBJECT_ID(N'Person.PersonAddress')
-         AND kc.[name] = N'UK_Person_PersonAddress_PersonId_AddressTypeId'
+      WHERE kc.parent_object_id = OBJECT_ID(N'Trains.Route')
+         AND kc.[name] = N'UK_Trains_Route_DepartureLocation_ArrivalLocation_DepartureTime'
    )
 BEGIN
-   ALTER TABLE Person.PersonAddress
-   ADD CONSTRAINT [UK_Person_PersonAddress_PersonId_AddressTypeId] UNIQUE NONCLUSTERED
+   ALTER TABLE Trains.[Route]
+   ADD CONSTRAINT [UK_Trains_Route_DepartureLocation_ArrivalLocation_DepartureTime] UNIQUE NONCLUSTERED
    (
-      PersonId,
-      AddressTypeId
+      DepartureLocation,
+      ArrivalLocation,
+      DepartureTime
    )
 END;
 
@@ -57,38 +51,18 @@ IF NOT EXISTS
    (
       SELECT *
       FROM sys.foreign_keys fk
-      WHERE fk.parent_object_id = OBJECT_ID(N'Person.PersonAddress')
-         AND fk.referenced_object_id = OBJECT_ID(N'Person.Person')
-         AND fk.[name] = N'FK_Person_PersonAddress_Person_Person'
+      WHERE fk.parent_object_id = OBJECT_ID(N'Trains.Route')
+         AND fk.referenced_object_id = OBJECT_ID(N'Trains.Train')
+         AND fk.[name] = N'FK_Trains_Route_Trains_Train'
    )
 BEGIN
-   ALTER TABLE Person.PersonAddress
-   ADD CONSTRAINT [FK_Person_PersonAddress_Person_Person] FOREIGN KEY
+   ALTER TABLE Train.[Route]
+   ADD CONSTRAINT [FK_Trains_Route_Trains_Train] FOREIGN KEY
    (
-      PersonId
+      TrainID
    )
-   REFERENCES Person.Person
+   REFERENCES Trains.Train
    (
-      PersonId
-   );
-END;
-
-IF NOT EXISTS
-   (
-      SELECT *
-      FROM sys.foreign_keys fk
-      WHERE fk.parent_object_id = OBJECT_ID(N'Person.PersonAddress')
-         AND fk.referenced_object_id = OBJECT_ID(N'Person.AddressType')
-         AND fk.[name] = N'FK_Person_PersonAddress_Person_AddressType'
-   )
-BEGIN
-   ALTER TABLE Person.PersonAddress
-   ADD CONSTRAINT [FK_Person_PersonAddress_Person_AddressType] FOREIGN KEY
-   (
-      AddressTypeId
-   )
-   REFERENCES Person.AddressType
-   (
-      AddressTypeId
+      TrainID
    );
 END;
