@@ -105,6 +105,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Sql\Data\Trains.CarType.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchCarType.sql" />
     <Content Include="Sql\Procedures\Trains.FetchRoute.sql" />
     <Content Include="Sql\Procedures\Trains.FetchPassengerRoute.sql" />
     <Content Include="Sql\Procedures\Trains.FetchCar.sql" />
