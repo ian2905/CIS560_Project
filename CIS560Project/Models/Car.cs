@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIS560Project.Models
 {
-    class Car
+    public class Car
     {
         public int CarID { get; }
         public int TrainID { get; }

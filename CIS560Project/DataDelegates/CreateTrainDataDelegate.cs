@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
-    class CreateTrainDataDelegate : NonQueryDataDelegate<Train>
+    public class CreateTrainDataDelegate : NonQueryDataDelegate<Train>
     {
         private readonly string name;
         private readonly string company;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CIS560Project.Models
 {
-    class PassengerRoute
+    public class PassengerRoute
     {
         public int PassengerRouteID { get; }
         public int PassengerID { get; }
