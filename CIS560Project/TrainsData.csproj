@@ -49,7 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\CreateCarDelegate.cs" />
+    <Compile Include="DataDelegates\CreatePassengerDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreatePassengerRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateRouteDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateTrainDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchCarDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchPassengerDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchPassengerRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchTrainDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +78,7 @@
     <Compile Include="Models\Train.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlCarRepository.cs" />
     <Compile Include="SqlTrainRepository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +105,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Sql\Data\Trains.CarType.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchRoute.sql" />
+    <Content Include="Sql\Procedures\Trains.FetchPassengerRoute.sql" />
     <Content Include="Sql\Procedures\Trains.FetchCar.sql" />
     <Content Include="Sql\Procedures\Trains.FetchTrain.sql" />
     <Content Include="Sql\Procedures\Trains.FetchPassenger.sql" />

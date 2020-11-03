@@ -9,6 +9,6 @@ namespace CIS560Project
 {
     public interface IRouteRepository
     {
-        Route CreateRoute(int trainID, string departureLocation, string arrivalLocation, DateTimeOffset departureTime, DateTimeOffset arrivalTime, int distance);
+        Route CreateRoute(int trainID, string departureLocation, string arrivalLocation, DateTimeOffset departureTime, int distance);
     }
 }

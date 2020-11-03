@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace CIS560Project.DataDelegates
 {
-    public class CreateTrainDataDelegate : NonQueryDataDelegate<Train>
+    internal class CreateTrainDataDelegate : NonQueryDataDelegate<Train>
     {
         private readonly string name;
         private readonly string company;
@@ -19,7 +19,7 @@ namespace CIS560Project.DataDelegates
         private readonly int carCapacity;
 
         public CreateTrainDataDelegate(string name, string company, string driver, int baseSpeed, int carCapacity)
-         : base("Person.CreatePerson")
+         : base("Trains.CreateTrain")
         {
             this.name = name;
             this.company = company;
