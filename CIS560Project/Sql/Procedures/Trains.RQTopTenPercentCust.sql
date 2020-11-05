@@ -1,4 +1,6 @@
 ﻿--Report Query 4
+--Top 10% of passenegers by distance as well as the amount of money each of those spent
+--I would like this to be finding out what company they road with the most or what car type they road the most but idk how for now
 CREATE OR ALTER PROCEDURE Trains.RQTopTenPercentCust
 AS
 

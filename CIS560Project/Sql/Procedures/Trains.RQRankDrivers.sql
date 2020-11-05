@@ -1,4 +1,6 @@
 ﻿--Report Query 1
+--Create a monthly(Data will span a single year) ranking of the drivers of each train on
+--how well they adhered to the expected travel time for each route they made in that year.
 CREATE OR ALTER PROCEDURE Trains.RQRankDrivers
 AS
 

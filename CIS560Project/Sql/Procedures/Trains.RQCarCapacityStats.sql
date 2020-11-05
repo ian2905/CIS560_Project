@@ -1,5 +1,6 @@
-﻿
---Report Query 2
+﻿--Report Query 2
+--Find out, on a monthly basis, how close each train car is meeting capacity for each of the
+--three car types(first class, business, economy).
 CREATE OR ALTER PROCEDURE Trains.RQCarCapacityStats
 AS
 

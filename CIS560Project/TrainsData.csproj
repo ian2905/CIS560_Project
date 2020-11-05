@@ -105,6 +105,14 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Sql\Data\Trains.CarType.sql" />
+    <Content Include="Sql\Procedures\Trains.QQGetTrainsByCompany.sql" />
+    <Content Include="Sql\Procedures\Trains.QQPassengersForCompany.sql" />
+    <Content Include="Sql\Procedures\Trains.QQPassengerRouteByDate.sql" />
+    <Content Include="Sql\Procedures\Trains.QQGetFirstClassPassengers.sql" />
+    <Content Include="Sql\Procedures\Trains.QQGetRoutesByTrain.sql" />
+    <Content Include="Sql\Procedures\Trains.QQSpentByPassenger.sql" />
+    <Content Include="Sql\Procedures\Trains.QQGetRoutesByDL.sql" />
+    <Content Include="Sql\Procedures\Trains.QQGetPassengerRoutes.sql" />
     <Content Include="Sql\Procedures\Trains.RQRankCompanies.sql" />
     <Content Include="Sql\Procedures\Trains.RQTopTenPercentCust.sql" />
     <Content Include="Sql\Procedures\Trains.RQCarCapacityStats.sql" />

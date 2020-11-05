@@ -1,8 +1,7 @@
-﻿CREATE OR ALTER PROCEDURE Trains.FetchTrain
-   @TrainID INT
+﻿CREATE OR ALTER PROCEDURE Trains.QQGetPassengerRoutes
+	@PassengerID INT
 AS
-
-SELECT T.[Name], T.Company, T.Driver, T.BaseSpeed, T.CarCapacity
-FROM Trains.Train T
-WHERE T.TrainID = @TrainID;
+SELECT PR.PassengerRouteID, PR.RouteID, PR.CarID, PR.TicketPrice
+FROM Trains.PassengerRoute PR
+WHERE PR.PassengerID = @PassengerID;
 GO

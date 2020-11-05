@@ -1,4 +1,5 @@
 ﻿--Report Query 3
+--Rank each company on revanue and customer count per each month
 CREATE OR ALTER PROCEDURE Trains.RQRankCompanies
 AS
 
