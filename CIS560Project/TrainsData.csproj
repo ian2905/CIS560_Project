@@ -105,6 +105,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Sql\Data\Trains.CarType.sql" />
+    <Content Include="Sql\Procedures\Trains.RQRankCompanies.sql" />
+    <Content Include="Sql\Procedures\Trains.RQTopTenPercentCust.sql" />
+    <Content Include="Sql\Procedures\Trains.RQCarCapacityStats.sql" />
+    <Content Include="Sql\Procedures\Trains.RQRankDrivers.sql" />
     <Content Include="Sql\Procedures\Trains.FetchCarType.sql" />
     <Content Include="Sql\Procedures\Trains.FetchRoute.sql" />
     <Content Include="Sql\Procedures\Trains.FetchPassengerRoute.sql" />
