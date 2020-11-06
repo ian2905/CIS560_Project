@@ -49,16 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataDelegates\CreateCarDelegate.cs" />
-    <Compile Include="DataDelegates\CreatePassengerDataDelegate.cs" />
-    <Compile Include="DataDelegates\CreatePassengerRouteDataDelegate.cs" />
-    <Compile Include="DataDelegates\CreateRouteDataDelegate.cs" />
-    <Compile Include="DataDelegates\CreateTrainDataDelegate.cs" />
-    <Compile Include="DataDelegates\FetchCarDataDelegate.cs" />
-    <Compile Include="DataDelegates\FetchPassengerDataDelegate.cs" />
-    <Compile Include="DataDelegates\FetchPassengerRouteDataDelegate.cs" />
-    <Compile Include="DataDelegates\FetchRouteDataDelegate.cs" />
-    <Compile Include="DataDelegates\FetchTrainDataDelegate.cs" />
+    <Compile Include="DataDelegates\Car\CreateCarDelegate.cs" />
+    <Compile Include="DataDelegates\Passenger\CreatePassengerDataDelegate.cs" />
+    <Compile Include="DataDelegates\PassengerRoute\CreatePassengerRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\Route\CreateRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\Train\CreateTrainDataDelegate.cs" />
+    <Compile Include="DataDelegates\Car\FetchCarDataDelegate.cs" />
+    <Compile Include="DataDelegates\Passenger\FetchPassengerDataDelegate.cs" />
+    <Compile Include="DataDelegates\PassengerRoute\FetchPassengerRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\Route\FetchRouteDataDelegate.cs" />
+    <Compile Include="DataDelegates\Train\FetchTrainDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,33 +102,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataDelegates\QuestionQueries\" />
+    <Folder Include="DataDelegates\ReportQueires\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Trains.CarType.sql" />
-    <Content Include="Sql\Procedures\Trains.QQGetTrainsByCompany.sql" />
-    <Content Include="Sql\Procedures\Trains.QQPassengersForCompany.sql" />
-    <Content Include="Sql\Procedures\Trains.QQPassengerRouteByDate.sql" />
-    <Content Include="Sql\Procedures\Trains.QQGetFirstClassPassengers.sql" />
-    <Content Include="Sql\Procedures\Trains.QQGetRoutesByTrain.sql" />
-    <Content Include="Sql\Procedures\Trains.QQSpentByPassenger.sql" />
-    <Content Include="Sql\Procedures\Trains.QQGetRoutesByDL.sql" />
-    <Content Include="Sql\Procedures\Trains.QQGetPassengerRoutes.sql" />
-    <Content Include="Sql\Procedures\Trains.RQRankCompanies.sql" />
-    <Content Include="Sql\Procedures\Trains.RQTopTenPercentCust.sql" />
-    <Content Include="Sql\Procedures\Trains.RQCarCapacityStats.sql" />
-    <Content Include="Sql\Procedures\Trains.RQRankDrivers.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchCarType.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchRoute.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchPassengerRoute.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchCar.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchTrain.sql" />
-    <Content Include="Sql\Procedures\Trains.FetchPassenger.sql" />
-    <Content Include="Sql\Procedures\Trains.CreateCar.sql" />
-    <Content Include="Sql\Procedures\Trains.CreatePassengerRoute.sql" />
-    <Content Include="Sql\Procedures\Trains.AddArrivalTime.sql" />
-    <Content Include="Sql\Procedures\Trains.CreateRoute.sql" />
-    <Content Include="Sql\Procedures\Trains.CreatePassenger.sql" />
-    <Content Include="Sql\Procedures\Trains.CreateTrain.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQGetTrainsByCompany.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQPassengersForCompany.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQPassengerRouteByDate.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQGetFirstClassPassengers.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQGetRoutesByTrain.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQSpentByPassenger.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQGetRoutesByDL.sql" />
+    <Content Include="Sql\Procedures\QuestionQueries\Trains.QQGetPassengerRoutes.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Trains.RQRankCompanies.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Trains.RQTopTenPercentCust.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Trains.RQCarCapacityStats.sql" />
+    <Content Include="Sql\Procedures\ReportQueries\Trains.RQRankDrivers.sql" />
+    <Content Include="Sql\Procedures\CarType\Trains.FetchCarType.sql" />
+    <Content Include="Sql\Procedures\Route\Trains.FetchRoute.sql" />
+    <Content Include="Sql\Procedures\PassengerRoute\Trains.FetchPassengerRoute.sql" />
+    <Content Include="Sql\Procedures\Car\Trains.FetchCar.sql" />
+    <Content Include="Sql\Procedures\Train\Trains.FetchTrain.sql" />
+    <Content Include="Sql\Procedures\Passenger\Trains.FetchPassenger.sql" />
+    <Content Include="Sql\Procedures\Car\Trains.CreateCar.sql" />
+    <Content Include="Sql\Procedures\PassengerRoute\Trains.CreatePassengerRoute.sql" />
+    <Content Include="Sql\Procedures\Route\Trains.AddArrivalTime.sql" />
+    <Content Include="Sql\Procedures\Route\Trains.CreateRoute.sql" />
+    <Content Include="Sql\Procedures\Passenger\Trains.CreatePassenger.sql" />
+    <Content Include="Sql\Procedures\Train\Trains.CreateTrain.sql" />
     <Content Include="Sql\Schemas\Trains.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\Trains.PassengerRoute.sql" />
