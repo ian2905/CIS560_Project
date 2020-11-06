@@ -7,13 +7,8 @@ AS
 SELECT P.PassengerID, P.FirstName, P.LastName,
 	SUM(R.Distance) AS DistanceTraveled,
 	NTILE(10) OVER(ORDER BY SUM(R.Distance) DESC) AS TravelRank,
-	(
-		SELECT 
-		FROM Trains.Train T
-			INNER JOIN Trains.[Route] SR ON SR.TrainID = T.TrainID
-		WHERE SR.RouteID = PR.RouteID
-	),
-	SUM(PR.TricketPrice) AS AmountSpent
+	SUM(PR.TricketPrice) AS AmountSpent,
+	NTILE(10) OVER(ORDER BY SUM(PR.TricketPrice) DESC) AS AmountSpentRank
 		
 FROM Trains.Passenger P
 	INNER JOIN Trains.PassengerRoute PR ON PR.PassengerID = P.PassengerID

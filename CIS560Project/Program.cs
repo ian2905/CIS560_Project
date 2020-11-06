@@ -4,6 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/*TODO List:
+ * - Add soft delete functionality
+ * - Queries
+*/
 namespace CIS560Project
 {
     static class Program

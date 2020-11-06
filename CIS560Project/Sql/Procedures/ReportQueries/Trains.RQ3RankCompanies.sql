@@ -12,7 +12,7 @@ SELECT T.Company,
 	COUNT(DISTINCT PR.PassengerID) AS PassengerCount, 
 	RANK() Over(
 		PARTITION BY MONTH(R.DepartureTime)
-		ORDER BY COUNT(DISTINCT PR.PassengerID)) AS CustomerCount
+		ORDER BY COUNT(DISTINCT PR.PassengerID)) AS PassengerCountRank
 FROM Trains.Train T
 	INNER JOIN Trains.Car C ON C.TrainID = T.TrainID
 	INNER JOIN Trains.PassengerRoute PR ON PR.CarID = C.CarID
