@@ -52,7 +52,14 @@
     <Compile Include="DataDelegates\Car\CreateCarDelegate.cs" />
     <Compile Include="DataDelegates\Passenger\CreatePassengerDataDelegate.cs" />
     <Compile Include="DataDelegates\PassengerRoute\CreatePassengerRouteDataDelegate.cs" />
-    <Compile Include="DataDelegates\QuestionQueries\FetchTrainDataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ8DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ7DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ6DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ5DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ4DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ3DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ2DataDelegate.cs" />
+    <Compile Include="DataDelegates\QuestionQueries\QQ1DataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueires\RQ4DataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueires\RQ3DataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueires\RQ1DataDelegate.cs" />
@@ -73,6 +80,7 @@
     <Compile Include="ICarRepository.cs" />
     <Compile Include="IPassengerRepository.cs" />
     <Compile Include="IPassengerRouteRepository.cs" />
+    <Compile Include="IQuestionQueryRepository.cs" />
     <Compile Include="IReportQueryRepository.cs" />
     <Compile Include="IRouteRepository.cs" />
     <Compile Include="ITrainRepository.cs" />
@@ -85,6 +93,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCarRepository.cs" />
+    <Compile Include="SqlQuestionQueryRepository.cs" />
     <Compile Include="SqlReportQueryRepository.cs" />
     <Compile Include="SqlTrainRepository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

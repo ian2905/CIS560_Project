@@ -1,5 +1,5 @@
 ﻿--4: Get all Routes for a particular train
-CREATE OR ALTER PROCEDURE Trains.QQGetRoutesByTrain
+CREATE OR ALTER PROCEDURE Trains.QQ4GetRoutesByTrain
 	@TrainID INT
 AS
 

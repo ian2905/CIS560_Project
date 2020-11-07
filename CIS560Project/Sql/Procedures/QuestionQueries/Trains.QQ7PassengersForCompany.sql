@@ -1,9 +1,9 @@
 ﻿--7: All customers who have riden with a particular company
-CREATE OR ALTER PROCEDURE Trains.QQPassengersForCompany
+CREATE OR ALTER PROCEDURE Trains.QQ7PassengersForCompany
 	@Company NVARCHAR(64)
 AS
 
-SELECT P.PassengerID, P.FirstName, P.LastName, P.Email
+SELECT DISTINCT P.PassengerID, P.FirstName, P.LastName, P.Email
 FROM Trains.Train T
 	INNER JOIN Trains.Car C ON C.TrainID = T.TrainID
 	INNER JOIN Trains.PassengerRoute PR ON PR.CarID = C.CarID

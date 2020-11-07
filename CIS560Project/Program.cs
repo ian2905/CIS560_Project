@@ -8,6 +8,7 @@ using System.Windows.Forms;
 /*TODO List:
  * - Add soft delete functionality
  * - Queries
+ * - ...
 */
 namespace CIS560Project
 {
